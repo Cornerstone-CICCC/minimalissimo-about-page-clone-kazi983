@@ -1,0 +1,362 @@
+/* ===========================
+Normalizing 
+==============================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+html {
+  font-family: var(--default-font-family);
+}
+a {
+  text-decoration: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* ===========================
+Root pseudo-class
+==============================*/
+:root {
+  --footer-bg-color: #f7f7f7;
+  --footer-accent-color: #efefef;
+  --color-neutral-200: oklch(92.2% 0 0);
+  --color-neutral-400: oklch(70.8% 0 0);
+  --color-neutral-500: oklch(55.6% 0 0);
+  --color-black: #000;
+  --color-white: #fff;
+  --text-base: 16px;
+  --text-s: 12px;
+  --text-xl: 24px;
+  --default-font-family: var(--font-sans);
+  --font-sans: 'Geist', sans-serif;
+  --spacing: 0.25rem;
+}
+
+/* ===========================
+Bg color
+==============================*/
+.bg-\[\#F7F7F7\] {
+  background-color: var(--footer-bg-color);
+}
+.bg-\[\#EFEFEF\] {
+  background-color: var(--footer-accent-color);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+
+/* ===========================
+Text size/color
+==============================*/
+.text-base {
+  font-size: var(--text-base);
+}
+.text-s {
+  font-size: var(--text-s);
+}
+.text-xl {
+  font-size: var(--text-xl);
+}
+.text-\[\#999999\] {
+  color: #999;
+}
+.text-\[\#888888\] {
+  color: #888;
+}
+.text-\[\#E0E0E0\] {
+  color: #e0e0e0;
+}
+.text-black {
+  color: var(--color-black);
+}
+.text-neutral-500 {
+  color: var(--color-neutral-500);
+}
+.line-height-\[1\.4\] {
+  line-height: 1.4;
+}
+.placeholder\:text-neutral-400 {
+  color: var(--color-neutral-400);
+}
+
+/* ===========================
+User action
+==============================*/
+.hover\:text-black:hover {
+  color: var(--color-black);
+}
+.hover\:text-neutral-500:hover {
+  color: var(--color-neutral-500);
+}
+.hover\:bg-black:hover {
+  background-color: var(--color-black);
+}
+.hover\:text-white:hover {
+  color: var(--color-white);
+}
+.hover\:border-black:hover {
+  border-color: var(--color-black);
+}
+.focus\:outline-none:focus {
+  outline-style: none; /* prevents the browser from rendering its default focus outline  */
+}
+.focus\:border-black:focus {
+  border-color: black;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* ===========================
+Sizing
+==============================*/
+.min-h-screen {
+  min-height: 100vh;
+}
+.max-w-\[2000px\] {
+  max-width: 2000px;
+}
+.max-w-\[464px\] {
+  max-width: 464px;
+}
+.w-full {
+  width: 100%;
+}
+.w-5 {
+  width: calc(var(--spacing) * 5);
+}
+
+.h-5 {
+  height: calc(var(--spacing) * 5);
+}
+.w-\[calc\(100vw-32px\)\] {
+  width: calc(100vw - 32px);
+}
+@media (min-width: 48rem) {
+  .md\:w-\[calc\(\(100vw-48px\)\/3\)\] {
+    width: calc(33.3333vw - 16px);
+  }
+}
+
+.h-\[42px\] {
+  height: 42px;
+}
+
+/* ===========================
+Spacing 
+==============================*/
+.px-3\.5 {
+  padding-inline: calc(var(--spacing) * 3.5);
+}
+.px-4 {
+  padding-inline: calc(var(--spacing) * 4);
+}
+
+.py-3 {
+  padding-block: calc(var(--spacing) * 3);
+}
+.py-4 {
+  padding-block: calc(var(--spacing) * 4);
+}
+.py-12 {
+  padding-block: calc(var(--spacing) * 12);
+}
+
+.pt-6 {
+  padding-top: calc(var(--spacing) * 6);
+}
+.pt-10 {
+  padding-top: calc(var(--spacing) * 10);
+}
+
+.pb-24 {
+  padding-bottom: calc(var(--spacing) * 24);
+}
+.pb-44 {
+  padding-bottom: calc(var(--spacing) * 44);
+}
+
+@media (min-width: 48rem) {
+  .md\:px-\[24px\] {
+    padding-inline: 24px;
+  }
+  .md\:py-16 {
+    padding-block: calc(var(--spacing) * 16);
+  }
+}
+
+.mt-2 {
+  margin-top: calc(var(--spacing) * 2);
+}
+
+.mb-4 {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+.mb-6 {
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.mb-8 {
+  margin-bottom: calc(var(--spacing) * 8);
+}
+.mb-16 {
+  margin-bottom: calc(var(--spacing) * 16);
+}
+
+.space-y-0\.5 > :not(:last-child) {
+  margin-bottom: calc(var(--spacing) * 0.5);
+}
+.space-y-2 > :not(:last-child) {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+.space-y-8 > :not(:last-child) {
+  margin-bottom: calc(var(--spacing) * 8);
+}
+
+.gap-2 {
+  gap: calc(var(--spacing) * 2);
+}
+.gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+.gap-6 {
+  gap: calc(var(--spacing) * 6);
+}
+@media (width >= 40rem) {
+  .md\:gap-0 {
+    gap: 0;
+  }
+}
+
+/* ===========================
+Block
+==============================*/
+.block {
+  display: block;
+}
+
+/* ===========================
+Flex
+==============================*/
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+flex-1 {
+  flex-grow: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+@media screen and (width>=40rem) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+  .md\:items-center {
+    align-items: center;
+  }
+  .md\:flex-1 {
+    flex-grow: 1;
+  }
+}
+.relative {
+  position: relative;
+}
+
+/* ===========================
+Grid
+==============================*/
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.col-span-6 {
+  grid-column-end: span 6;
+}
+.col-span-12 {
+  grid-column-end: span 12;
+}
+
+@media (width>=40rem) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width>=64rem) {
+  .lg\:col-start-1\/2 {
+    grid-column-start: 7;
+  }
+
+  .lg\:col-span-3 {
+    grid-column-end: span 3;
+  }
+  .lg\:col-span-6 {
+    grid-column-end: span 6;
+  }
+  .lg\:col-span-8 {
+    grid-column-end: span 8;
+  }
+}
+
+/* ===========================
+Style
+==============================*/
+.border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-neutral-200);
+}
+.border-\[\#E0E0E0\] {
+  border-color: #e0e0e0;
+}
+.rounded-\[4px\] {
+  border-radius: 4px;
+}
+.rounded-\[8px\] {
+  border-radius: 8px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+/* ===========================
+Position
+==============================*/
+.bottom-6 {
+  bottom: calc(var(--spacing) * 6);
+}
+.left-1\/2 {
+  left: 50%;
+}
+.transform-x-1\/2 {
+  transform: translateX(-50%);
+}
+.fixed {
+  position: fixed;
+}
