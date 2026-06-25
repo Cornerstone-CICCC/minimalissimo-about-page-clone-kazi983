@@ -418,3 +418,13 @@ Position
 .relative {
   position: relative;
 }
+
+/* ===========================
+Transition
+==============================*/
+.transition-colors {
+  transition-property: color;
+}
+.duration-150:hover {
+  transition-duration: 0.15s;
+}
