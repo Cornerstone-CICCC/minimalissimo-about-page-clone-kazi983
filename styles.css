@@ -270,7 +270,7 @@ Flex
 .justify-between {
   justify-content: space-between;
 }
-flex-1 {
+.flex-1 {
   flex-grow: 1;
 }
 .flex-shrink-0 {
@@ -398,6 +398,17 @@ img {
 }
 .ring-white {
   outline: 2px solid white;
+}
+
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* ===========================
