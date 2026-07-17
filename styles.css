@@ -399,7 +399,6 @@ img {
 .ring-white {
   outline: 2px solid white;
 }
-
 .invisible {
   position: absolute;
   width: 1px;
@@ -409,6 +408,10 @@ img {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+button{
+  background-color: inherit;
+  border-width: 0;
 }
 
 /* ===========================
